@@ -1,0 +1,33 @@
+.card-container{
+display : grid ;
+/*grid-template-columns: 70% 30%;*/
+
+}
+
+.pic{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#i2{
+    align-self: center;
+  }
+
+.quote{
+  border: 1px solid red;
+  display: flex;
+  place-items: center; /* Center the content horizontally and vertically */
+  text-align: center;
+  flex-direction: row;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.side p{
+    margin: 0;
+   
+    
+}

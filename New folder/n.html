@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@700&family=Crimson+Text:italic@1&display=swap" rel="stylesheet">
+  <style>
+    .content-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      background-image: url('image13.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Overlay with adjustable opacity */
+    .content-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (0.3) between 0 and 1 to control fade */
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .animated-text {
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .animated-text::before {
+      content: "Hello!";
+      font-family: 'Poppins', sans-serif;
+      animation: textChange 6s infinite;
+    }
+
+    .quote {
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      color: white;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      padding: 0 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+
+    }
+
+    .author {
+      color: #e5e5e5;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes textChange {
+      0%, 45% {
+        content: "Hello!";
+        font-family: 'Poppins', sans-serif;
+        opacity: 1;
+      }
+      47%, 49% {
+        opacity: 0;
+      }
+      50%, 95% {
+        content: "Namaste!";
+        font-family: 'Playfair Display', serif;
+        opacity: 1;
+      }
+      97%, 100% {
+        opacity: 0;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-width: 200px;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background-color: white;
+      color: black;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .btn-blue {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .btn-blue:hover {
+      background-color: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+      .animated-text {
+        font-size: 2.5rem;
+      }
+      .quote {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="content">
+      <h1 class="animated-text"></h1>
+      <div class="quote">
+        "Each meeting occurs at the precise moment for which it was meant. Usually, when it will have the greatest impact on our lives."
+        <div class="author">― Nadia Scrieva, Fathoms of Forgiveness</div>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary">Read my posts</button>
+        <button class="btn btn-outline">Go to Gallery</button>
+        <button class="btn btn-blue">Mere Vichar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

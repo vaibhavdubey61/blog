@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternate Scrolling Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #34495e;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      overflow: hidden;
+      height: 100px;
+    }
+
+    .scroll-set {
+      position: relative;
+      height: 40px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .scroll-text {
+      position: absolute;
+      width: 100%;
+      animation: scroll-up 4s infinite ease-in-out;
+    }
+
+    .scroll-set:nth-child(2) .scroll-text {
+      animation: scroll-down 4s infinite ease-in-out;
+    }
+
+    @keyframes scroll-up {
+      0%, 25% {
+        transform: translateY(0);
+      }
+      50%, 75% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scroll-down {
+      0%, 25% {
+        transform: translateY(0);
+      }
+      50%, 75% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .text-group {
+      display: block;
+      line-height: 40px;
+      font-size: 1.5rem;
+      color: #ecf0f1;
+    }
+  </style>
+</head>
+<body

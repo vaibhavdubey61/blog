@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a {
+  text-decoration: none;
+  color: #007bff; 
+}
+
+a:hover {
+  color: #0056b3; 
+  text-decoration: underline;
+  transition: all 0.3s ease; 
+}
+
+a:hover::after {
+  content: " ➜"; /* UTF-8 right arrow */
+  margin-left: 5px; 
+}
+</style>
+</head>
+<body>
+
+<a href="https://www.example.com">Visit Example</a>
+
+</body>
+</html>
